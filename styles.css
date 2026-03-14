@@ -1,0 +1,415 @@
+/* ---------- COLORS & VARIABLES ---------- */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #020202;
+
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg-hover: rgba(255, 255, 255, 0.08);
+
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+
+    --accent-base: #a78bfa;
+    --accent-hover: #c4b5fd;
+
+    --btn-sleep-bg: rgba(167, 139, 250, 0.18);
+    --btn-sleep-hover: rgba(167, 139, 250, 0.35);
+
+    --btn-premium-grad: linear-gradient(135deg, #a78bfa, #c4b5fd);
+}
+
+/* ---------- GENERAL TYPOGRAPHY ---------- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ---------- POPUP STYLES ---------- */
+body.popup-page {
+    width: 340px;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+.header {
+    padding: 24px 20px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: var(--text-primary);
+}
+
+.stats-panel {
+    margin: 10px 20px;
+    padding: 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.actions {
+    padding: 12px 20px;
+}
+
+.sleep-all-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sleep-all-btn:hover {
+    background: var(--glass-bg-hover);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    padding: 8px 20px 8px;
+}
+
+.section-title h2 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+}
+
+ul#tab-list {
+    list-style-type: none;
+    padding: 0 16px 16px;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Custom Webkit Scrollbar */
+ul#tab-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul#tab-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ul#tab-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.tab-item:hover {
+    transform: translateY(-2px);
+    background: var(--glass-bg);
+}
+
+.tab-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.tab-details {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.tab-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.tab-domain {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-state {
+    padding: 24px 16px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.sleep-btn {
+    background: var(--btn-sleep-bg);
+    color: var(--accent-hover);
+    border: none;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.sleep-btn:hover {
+    background: var(--btn-sleep-hover);
+    color: #fff;
+}
+
+
+/* ---------- SLEEP PAGE STYLES ---------- */
+
+/* Core page layout and deep dark gradient background */
+body.sleep-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Subtle ambient lighting layer */
+body.sleep-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.05),
+            transparent 60%);
+    filter: blur(60px);
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Soft violet glow specifically positioned behind the card */
+.ambient-glow {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at center,
+            rgba(167, 139, 250, 0.15),
+            transparent 70%);
+    filter: blur(60px);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Floating Glass Modal */
+.sleep-container {
+    text-align: center;
+    padding: 48px;
+    border-radius: 24px;
+    max-width: 420px;
+    width: 85%;
+    z-index: 10;
+
+    /* macOS frosted glass effect */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+
+    /* Subdued elegant border with inner light catch */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    /* Subtle floating motion */
+    animation: card-float 6s infinite ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes card-float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo-title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.sleep-message {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    /* Reduced to make room for the indicator below it */
+}
+
+/* ------ SLEEP INDICATOR ------ */
+.sleep-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 32px;
+    /* Space between indicator and wake button */
+    margin-top: 18px;
+}
+
+.indicator-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    margin-right: 4px;
+    /* Slight extra gap before dots start */
+}
+
+.sleep-indicator .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-base);
+    border-radius: 50%;
+    animation: dotPulse 1.4s infinite ease-in-out;
+}
+
+/* Sequential stagger */
+.sleep-indicator .dot:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.sleep-indicator .dot:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.sleep-indicator .dot:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+}
+
+/* Premium Apple Action Button */
+.wake-btn {
+    background: var(--btn-premium-grad);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 12px 35px rgba(167, 139, 250, 0.35);
+}
+
+.wake-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(167, 139, 250, 0.45);
+}
+
+.wake-btn:active:not(:disabled) {
+    transform: translateY(1px);
+    box-shadow: 0 8px 16px rgba(167, 139, 250, 0.25);
+}

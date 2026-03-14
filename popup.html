@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TabNap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="popup-page">
+    <div class="header">
+        <img src="icons/icon.png" class="logo">
+        <h1>TabNap</h1>
+    </div>
+
+    <div class="stats-panel">
+        <div class="stat-item">
+            <span class="stat-label">Active Tabs</span>
+            <span id="active-count" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Sleeping Tabs</span>
+            <span id="sleeping-count" class="stat-value">0</span>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button id="sleep-all-btn" class="sleep-all-btn">Sleep All Other Tabs</button>
+    </div>
+
+    <div class="section-title">
+        <h2>Active Tabs</h2>
+    </div>
+
+    <ul id="tab-list">
+        <!-- Tabs will be injected here via popup.js -->
+    </ul>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
