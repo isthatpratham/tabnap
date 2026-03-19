@@ -6,7 +6,7 @@ Instead of keeping dozens of heavy tabs active, TabNap replaces inactive tabs wi
 
 ---
 
-# ✨ Features
+# ✨ Features:
 
 ### Smart Tab Sleeping
 
