@@ -1,4 +1,4 @@
-# TabNap 💤
+# TabNap 
 
 **TabNap** is a lightweight Chrome extension that intelligently puts inactive browser tabs to sleep, helping reduce memory usage and improve browser performance.
 
@@ -6,7 +6,7 @@ Instead of keeping dozens of heavy tabs active, TabNap replaces inactive tabs wi
 
 ---
 
-# ✨ Features:
+#  Features:
 
 ### Smart Tab Sleeping
 
@@ -56,7 +56,7 @@ This approach frees memory from inactive tabs without losing the browsing sessio
 
 ---
 
-# 🧠 Why TabNap?
+#  Why TabNap?
 
 Modern browsing sessions often involve **20–100 open tabs**, which consume large amounts of memory.
 
@@ -68,7 +68,7 @@ TabNap solves this problem by:
 
 ---
 
-# 🧱 Project Architecture
+#  Project Architecture
 
 ```
 Chrome Browser
@@ -110,7 +110,7 @@ TabNap Extension
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```
 tabnap/
@@ -132,7 +132,7 @@ tabnap/
 
 ---
 
-# 🚀 Installation (Local Development)
+#  Installation (Local Development)
 
 ### 1 Clone the Repository
 
@@ -158,7 +158,7 @@ The extension will now appear in your Chrome toolbar.
 
 ---
 
-# 🧪 Usage
+#  Usage
 
 1. Click the **TabNap icon** in the Chrome toolbar.
 2. View your currently open tabs.
@@ -167,7 +167,7 @@ The extension will now appear in your Chrome toolbar.
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 Possible enhancements:
 
@@ -180,7 +180,7 @@ Possible enhancements:
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Pratham Debnath**
 
@@ -189,7 +189,7 @@ Aspiring Software Engineer
 
 ---
 
-# ⭐ Support
+#  Support
 
 If you like this project, consider giving it a **star on GitHub**.
 
